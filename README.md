@@ -5,7 +5,6 @@ Kode ini digunakan untuk:
 •	Mengunduh dataset laporan kecelakaan di Nashville dari Kaggle.
 •	Melakukan preprocessing data.
 •	Membangun dan mengevaluasi model klasifikasi pohon keputusan (Decision Tree) untuk memprediksi apakah suatu kecelakaan adalah “Hit and Run” (tabrak lari).
-
 2. Detail Langkah-langkah Kode
 a. Import Library
 •	kagglehub → untuk mengunduh dataset dari Kaggle.
@@ -24,7 +23,6 @@ Menampilkan nama-nama file dalam folder dataset untuk memastikan file CSV yang a
 d. Baca dataset
 df = pd.read_csv(file_path)
 Dataset CSV dibaca ke dalam DataFrame pandas.
-
 e. Tampilkan data awal
 print(df.head())
 print(df.columns)
@@ -42,7 +40,6 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 Membagi data menjadi:
 •	80% data pelatihan.
 •	20% data pengujian.
-
 i. Buat dan latih model
 dtree = DecisionTreeClassifier(max_depth=3)
 dtree.fit(x_train, y_train)
@@ -67,4 +64,4 @@ Menampilkan diagram pohon keputusan secara visual.
 ✅ Tidak ada proses encoding untuk data kategorikal (kalau ada).
 ✅ Model hanya memakai 4 fitur sederhana; mungkin perlu fitur tambahan atau teknik feature engineering.
 ✅ Tidak ada metrik evaluasi lain seperti confusion matrix, precision, recall, atau F1-score.
-✅ Tidak ada penyimpanan model atau hasil visualisasi.
+✅ Tidak ada penyimpanan model atau hasil visualisasi
